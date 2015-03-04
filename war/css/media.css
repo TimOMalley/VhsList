@@ -1,0 +1,43 @@
+body {
+	background: #0080c0;
+	margin:0;
+	padding:0;
+	}
+table.center {
+	margin-left:auto; 
+    margin-right:auto;
+    border-collapse:collapse;
+	}
+tr.bgwhite td {
+	background-color: #FFFFFF; color: black;
+	}
+td.pad, th.pad {
+	padding:10;
+}
+td.padwithborder, th.padwithborder {
+	padding:10;
+	border:1px solid black;
+}
+span.tooltip {
+	border-bottom: thin dotted;
+}
+span.tooltip:hover {
+	text-decoration: none;
+	background: #ffffff;
+	z-index: 6;
+}
+span.tooltip span {
+	position: absolute;
+	left: -9999px;
+	margin: 4px 0 0 0px;
+	padding: 3px 3px 3px 3px; 
+	border-style:solid;
+	border-color:black;
+	border-width:1px;
+}
+span.tooltip:hover span {
+	left: 2%;
+	margin: 20px 0 0 170px;
+	background: #ffffff;
+	z-index:6;
+} 

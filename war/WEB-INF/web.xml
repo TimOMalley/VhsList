@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>VhsList</servlet-name>
+		<servlet-class>com.twelvelouisiana.googleapps.vhslist.VhsListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VhsList</servlet-name>
+		<url-pattern>/vhslist</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>AddMovie</servlet-name>
+		<servlet-class>com.twelvelouisiana.googleapps.vhslist.AddMovieServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddMovie</servlet-name>
+		<url-pattern>/admin/servlet/addmovie</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UpdateMovie</servlet-name>
+		<servlet-class>com.twelvelouisiana.googleapps.vhslist.UpdateMovieServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateMovie</servlet-name>
+		<url-pattern>/admin/servlet/updatemovie</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DeleteMovie</servlet-name>
+		<servlet-class>com.twelvelouisiana.googleapps.vhslist.DeleteMovieServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteMovie</servlet-name>
+		<url-pattern>/admin/servlet/deletemovie</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EmailMovieList</servlet-name>
+		<servlet-class>com.twelvelouisiana.googleapps.vhslist.EmailMovieListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EmailMovieList</servlet-name>
+		<url-pattern>/emailmovielist</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>jsp/index.jsp</welcome-file>
+	</welcome-file-list>
+	<security-constraint>
+        <web-resource-collection>
+        <web-resource-name>restricted areas</web-resource-name>
+            <url-pattern>/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+</web-app>
